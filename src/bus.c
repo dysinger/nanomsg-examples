@@ -3,6 +3,7 @@
 #include <string.h>
 #include <pthread.h>
 #include <stdio.h>
+#include <unistd.h>
 #include <nanomsg/nn.h>
 #include <nanomsg/bus.h>
 
@@ -14,8 +15,7 @@ int node (const int argc, const char **argv)
     sleep (1); // wait for connections
     if (argc >= 3)
     {
-        int x=3;
-        for(x; x<argc; x++)
+        for(int x=3; x<argc; x++)
             assert (nn_connect (sock, argv[x]) >= 0);
     }
     sleep (1); // wait for connections

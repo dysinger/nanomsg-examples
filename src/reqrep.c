@@ -57,7 +57,7 @@ int node1 (const char *url)
     assert (bytes == sz_date);
     bytes = nn_recv (sock, &buf, NN_MSG, 0);
     assert (bytes >= 0);
-    printf ("NODE1: RECEIVED DATE %s\n", buf, bytes);
+    printf ("NODE1: RECEIVED DATE %*s\n", bytes, buf);
     nn_freemsg (buf);
     return nn_shutdown (sock, 0);
 }
