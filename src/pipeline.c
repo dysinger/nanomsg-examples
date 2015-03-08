@@ -38,9 +38,9 @@ int node1 (const char *url, const char *msg)
 
 int main (const int argc, const char **argv)
 {
-    if (strncmp (NODE0, argv[1], strlen (NODE0)) == 0 && argc > 1)
+    if ((argc > 2) && strncmp (NODE0, argv[1], strlen (NODE0)) == 0)
         return node0 (argv[2]);
-    else if (strncmp (NODE1, argv[1], strlen (NODE1)) == 0 && argc > 2)
+    else if ((argc > 3) && strncmp (NODE1, argv[1], strlen (NODE1)) == 0)
         return node1 (argv[2], argv[3]);
     else
     {
