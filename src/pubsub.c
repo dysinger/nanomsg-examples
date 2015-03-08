@@ -3,6 +3,7 @@
 #include <string.h>
 #include <pthread.h>
 #include <stdio.h>
+#include <unistd.h>
 #include <nanomsg/nn.h>
 #include <nanomsg/pubsub.h>
 

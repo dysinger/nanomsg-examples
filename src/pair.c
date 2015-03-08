@@ -5,6 +5,7 @@
 #include <nanomsg/nn.h>
 #include <nanomsg/pair.h>
 #include <stdio.h>
+#include <unistd.h>
 
 #define NODE0 "node0"
 #define NODE1 "node1"
