@@ -89,7 +89,9 @@
 
     #+begin_src c :tangle ./reqrep.c
       #include <assert.h>
-      #include <libc.h>
+      #include <unistd.h>
+      #include <string.h>
+      #include <pthread.h>
       #include <stdio.h>
       #include <nanomsg/nn.h>
       #include <nanomsg/reqrep.h>
@@ -145,7 +147,7 @@
         assert (bytes == sz_date);
         bytes = nn_recv (sock, &buf, NN_MSG, 0);
         assert (bytes >= 0);
-        printf ("NODE1: RECEIVED DATE %s\n", buf, bytes);
+        printf ("NODE1: RECEIVED DATE %s\n", buf);
         nn_freemsg (buf);
         return nn_shutdown (sock, 0);
       }
