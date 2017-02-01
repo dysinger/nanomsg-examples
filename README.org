@@ -9,7 +9,9 @@
 
     #+begin_src c :tangle ./pipeline.c
       #include <assert.h>
-      #include <libc.h>
+      #include <unistd.h>
+      #include <string.h>
+      #include <pthread.h>
       #include <stdio.h>
       #include <nanomsg/nn.h>
       #include <nanomsg/pipeline.h>
@@ -89,7 +91,9 @@
 
     #+begin_src c :tangle ./reqrep.c
       #include <assert.h>
-      #include <libc.h>
+      #include <unistd.h>
+      #include <string.h>
+      #include <pthread.h>
       #include <stdio.h>
       #include <nanomsg/nn.h>
       #include <nanomsg/reqrep.h>
@@ -194,7 +198,9 @@
 
     #+begin_src c :tangle ./pair.c
       #include <assert.h>
-      #include <libc.h>
+      #include <unistd.h>
+      #include <string.h>
+      #include <pthread.h>
       #include <nanomsg/nn.h>
       #include <nanomsg/pair.h>
       #include <stdio.h>
@@ -300,7 +306,9 @@
 
     #+begin_src c :tangle ./pubsub.c
       #include <assert.h>
-      #include <libc.h>
+      #include <unistd.h>
+      #include <string.h>
+      #include <pthread.h>
       #include <stdio.h>
       #include <nanomsg/nn.h>
       #include <nanomsg/pubsub.h>
@@ -413,7 +421,9 @@
 
     #+begin_src c :tangle ./survey.c
       #include <assert.h>
-      #include <libc.h>
+      #include <unistd.h>
+      #include <string.h>
+      #include <pthread.h>
       #include <stdio.h>
       #include <nanomsg/nn.h>
       #include <nanomsg/survey.h>
@@ -531,7 +541,9 @@
 
     #+begin_src c :tangle ./bus.c
       #include <assert.h>
-      #include <libc.h>
+      #include <unistd.h>
+      #include <string.h>
+      #include <pthread.h>
       #include <stdio.h>
       #include <nanomsg/nn.h>
       #include <nanomsg/bus.h>
